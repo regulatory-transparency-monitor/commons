@@ -1,14 +1,14 @@
 package models
 
-/* type ServiceData interface {
-	GetServiceSource() string
-	GetData() []interface{}
-}
+import "time"
 
-type CombinedResources interface {
-	GetSource() string
-	GetData() []ServiceData
-} */
+type RawData map[string][]interface{}
+
+type GraphMetadata struct {
+	Source    string
+	Version   string
+	Timestamp time.Time
+}
 
 type CombinedResources struct {
 	Source string
